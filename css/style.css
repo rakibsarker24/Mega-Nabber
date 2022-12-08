@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding: 0;
+    /* background-color: blueviolet; */
+}
+#nav{
+    background-color: blueviolet;
+}
+
+/* logo,menu,icon 
+flex; justify-content:space-between*/
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+nav > ul{
+   display: flex;
+}
+nav ul li{
+   list-style: none;
+   padding: 20px 10px;
+}
+nav ul li a{
+   text-decoration: none;
+   color: white;
+}
+nav ul li a:hover{
+   color: rgb(248, 252, 5);
+}
+.dropdown{
+   background-color: red;
+   position: absolute;
+   top:9.5%;
+    display: none;
+}
+.dropdown h2{
+   padding:5px 10px;
+   color:gold;
+}
+.dropdown ul li{
+   padding:5px 10px;
+   color:gold;
+}
+nav > ul > li:hover .dropdown{
+    display: block;
+}
+
+/* mega menu */
+nav > ul > li:hover .dropdown.mega-menu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2em;
+}
+.container .logo{
+    line-height: 55px;
+}
+.container .icon{
+    line-height: 55px;
+}
